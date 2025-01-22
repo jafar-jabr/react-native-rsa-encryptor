@@ -12,11 +12,17 @@ npm install react-native-rsa-encryptor
 
 
 ```js
-import { multiply } from 'react-native-rsa-encryptor';
+import { encryptToken } from 'react-native-rsa-encryptor';
 
 // ...
 
-const result = multiply(3, 7);
+const key =
+  '-----BEGIN PUBLIC KEY-----\n' +
+  'key' +
+  '-----END PUBLIC KEY-----';
+
+const txt = 'any text';
+const token = encryptToken(txt, key);
 ```
 
 

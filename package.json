@@ -48,7 +48,17 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "rsa",
+    "encryptor",
+    "encrypt",
+    "decrypt",
+    "crypto",
+    "security",
+    "encryption",
+    "decryption",
+    "asymmetric",
+    "public-key"
   ],
   "repository": {
     "type": "git",

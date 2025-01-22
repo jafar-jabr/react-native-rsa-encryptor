@@ -1,7 +1,10 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-rsa-encryptor';
+import { encryptToken } from 'react-native-rsa-encryptor';
 
-const result = multiply(3, 7);
+const key = '-----BEGIN PUBLIC KEY-----\n' + 'key' + '-----END PUBLIC KEY-----';
+
+const token = 'hello';
+const result = encryptToken(token, key);
 
 export default function App() {
   return (
