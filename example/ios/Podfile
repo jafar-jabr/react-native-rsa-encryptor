@@ -38,5 +38,12 @@ target 'RsaEncryptorExample' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+    installer.pods_project.targets.each do |target|
+        if target.name == 'glog'
+          target.build_configurations.each do |config|
+            config.build_settings['GCC_TREAT_WARNINGS_AS_ERRORS'] = 'NO'
+          end
+        end
+      end
   end
 end
